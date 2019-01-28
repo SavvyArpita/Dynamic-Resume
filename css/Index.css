@@ -68,6 +68,7 @@ a:focus {
 	min-height: 100vh;
 	margin: 0 auto;
 	padding: 3em 2em;
+	flex-direction: column;
 }
 /* Common styles for the menus */
 .menu {
@@ -100,8 +101,8 @@ a:focus {
 /* About section css */
 
 #about {
-	background: white;
-	background-image: url(../fonts/react-brands.svg), url(../fonts/angular-brands.svg), url(../fonts/ember-brands.svg), url(../fonts/css3-alt-brands.svg), url(../fonts/git-brands.svg), url(../fonts/node-brands.svg), url(../fonts/html5-brands.svg), url(../fonts/js-brands.svg) ;
+	background: #f3e9c6;
+	background-image: url(../fonts/react-brands.svg), url(../fonts/angular-brands.svg), url(../fonts/ember-brands.svg), url(../fonts/css3-alt-brands.svg), url(../fonts/Git-logo.svg), url(../fonts/node-brands.svg), url(../fonts/html5-brands.svg), url(../fonts/js-brands.svg) ;
 	background-repeat: no-repeat;
 	background-position: 0% 0%, 50% 0%, 100% 0%, 0% 50%, 0% 100%, 50% 100%, 100% 50%, 100% 100%;
 	background-size: 8%;
@@ -110,7 +111,34 @@ a:focus {
 
 @keyframes about {
 	from { background-position: 0% 0%, 50% 0%, 100% 0%, 0% 50%, 0% 100%, 50% 100%, 100% 50%, 100% 100%; }
-	to { background-position: 0% 10%, 50% 10%, 100% 10%, 10% 50%, 10% 100%, 60% 100%, 100% 60%, 90% 90%; }
+	to { background-position: 0% 50%, 0% 0%, 50% 0%, 0% 100%, 50% 100%, 100% 100%, 100% 0%, 100% 50%; }
+}
+
+.intro1 {
+	font-weight: 900;
+	font-size: 3.5em;
+}
+
+.intro1 .letter {
+	display: inline-block;
+	line-height: 1em;
+}
+p.intro2 {
+  position: relative;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+.intro2 .text-wrapper {
+	display: block;
+	padding-left: 10em;
+    padding-right: 10em;
+	overflow: hidden;
+	text-align: justify;
+}
+.intro2 .letter {
+	display: inline-block;
+	line-height: 1em;
+	transform-origin: 0 0;
 }
 
 @media screen and (max-width: 50em) {

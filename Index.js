@@ -28,49 +28,67 @@
 		navigate(linkEl);
 	});
 
+	function selectHandler() {
+		$('.intro1').hide();
+		$('.intro2').hide();
+		setTimeout(function() {loadAboutSection()},700);
+	}
+
 	/* Home page animation ends */
 
 	/* About me page animation starts */
 
-	// The about me Heading animation
+	function loadAboutSection() {
+		$('.intro1').show();
+		$('.intro2').show();
 
-	$('.intro1').each(function(){
-		$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-	});
-	  
-	anime.timeline({loop: false})
-	.add({
-		targets: '.intro1 .letter',
-		scale: [4,1],
-		opacity: [0,1],
-		translateZ: 0,
-		easing: "easeOutExpo",
-		duration: 950,
-		delay: function(el, i) {
-		return 70*i;
+		$('.intro1').each(function(){
+			$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+		});
+		let label = document.querySelector('.intro2 .letters');
+		charming(label);
+		let domletters= Array.from(label.querySelectorAll('span'));
+
+		const headingAnimation={
+			targets: '.intro1 .letter',
+			scale: [4,1],
+			opacity: [0,1],
+			translateZ: 0,
+			easing: "easeInOutExpo",
+			duration: 950,
+			delay: function(el, i) {
+			return 70*i;
+			}
+		};
+
+		const paragraphAnimation={
+			targets: '.intro1',
+			opacity: 1,
+			easing: "easeInOutExpo",
+			delay: 1000
 		}
-	}).add({
-		targets: '.intro1',
-		opacity: 1,
-		easing: "easeOutExpo",
-		delay: 1000
-	});
 
-	// The about me description animation
-
-	let label = document.querySelector('.intro2 .letters');
-	charming(label);
-	let domletters= Array.from(label.querySelectorAll('span'));
-	applyAnime();
-	function applyAnime() {
-		anime.timeline({loop: false})
-		.add({
+		const introAnimation={
 			targets: domletters,
 			duration: 20,
 			delay: (t,i) => (i+5)*30,
-			easing: 'easeInOutExpo',
-			opacity: [0,1]
-		})
+			offset: '+=100',
+			opacity: {
+			value: [0,1],
+			duration: 300,
+			easing: 'easeOutExpo',
+			}
+		};
+
+		const tl = anime.timeline({
+			autoplay: false,
+		});
+
+		tl.add(headingAnimation)
+		  .add(paragraphAnimation)
+		  .add(introAnimation);
+
+		tl.play();
 	}
 
 	/* About me page animation ends */

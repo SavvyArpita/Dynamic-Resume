@@ -107,6 +107,7 @@ a:focus {
 	background-position: 0% 0%, 50% 0%, 100% 0%, 0% 50%, 0% 100%, 50% 100%, 100% 50%, 100% 100%;
 	background-size: 8%;
 	animation: about 4s linear infinite;
+	animation-direction: alternate;
 }
 
 @keyframes about {
@@ -122,7 +123,9 @@ a:focus {
 .intro1 .letter {
 	display: inline-block;
 	line-height: 1em;
+	font-family: 'Alegreya', serif;
 }
+
 p.intro2 {
   position: relative;
   font-weight: 700;
@@ -134,11 +137,14 @@ p.intro2 {
     padding-right: 10em;
 	overflow: hidden;
 	text-align: justify;
+	color:darkmagenta;
 }
-.intro2 .letter {
-	display: inline-block;
-	line-height: 1em;
-	transform-origin: 0 0;
+.intro2 .letters {
+	font-family: 'Roboto Slab', serif;
+}
+
+.letters span {
+	opacity: 0;
 }
 
 @media screen and (max-width: 50em) {

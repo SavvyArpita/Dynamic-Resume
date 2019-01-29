@@ -101,7 +101,7 @@ a:focus {
 /* About section css */
 
 #about {
-	background: #f3e9c6;
+	background: #ea506d;
 	background-image: url(../fonts/react-brands.svg), url(../fonts/angular-brands.svg), url(../fonts/ember-brands.svg), url(../fonts/css3-alt-brands.svg), url(../fonts/Git-logo.svg), url(../fonts/node-brands.svg), url(../fonts/html5-brands.svg), url(../fonts/js-brands.svg) ;
 	background-repeat: no-repeat;
 	background-position: 0% 0%, 50% 0%, 100% 0%, 0% 50%, 0% 100%, 50% 100%, 100% 50%, 100% 100%;

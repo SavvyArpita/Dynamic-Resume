@@ -20,23 +20,23 @@
     <main>
         <section class="content">
             <nav class="menu menu--adsila">
-                <a class="menu__item" href="#about" onclick="selectHandler()">
+                <a class="menu__item" href="#about" onclick="selectHandler(this)">
                     <span class="menu__item-name">About</span>
                     <span class="menu__item-label">Get to know about me</span>
                 </a>
-                <a class="menu__item" href="#">
+                <a class="menu__item" href="#skills" onclick="selectHandler(this)">
                     <span class="menu__item-name">Skills</span>
                     <span class="menu__item-label">Know how I can be helpful </span>
                 </a>
-                <a class="menu__item" href="#">
-                    <span class="menu__item-name">Experience</span>
+                <a class="menu__item" href="#workexperience" onclick="selectHandler(this)">
+                    <span class="menu__item-name">Work Experience</span>
                     <span class="menu__item-label">Read about my work history</span>
                 </a>
-                <a class="menu__item" href="#">
+                <a class="menu__item" href="#portfolio" onclick="selectHandler(this)">
                     <span class="menu__item-name">Portfolio</span>
                     <span class="menu__item-label">Explore my work</span>
                 </a>
-                <a class="menu__item" href="#">
+                <a class="menu__item" href="#contact" onclick="selectHandler(this)">
                     <span class="menu__item-name">Contact</span>
                     <span class="menu__item-label">Get in touch and find us</span>
                 </a>
@@ -49,6 +49,9 @@
                     <span class="letters">My name is Arpita Singh, UI developer from India. I enjoy building beautiful and functional web applications. I am having 4+ years of professional experience in developing banking applications using various JavaScript frameworks.</span>
                 </span>
             </p>
+        </section>
+        <section class="content" id="skills">
+
         </section>
     </main>
     <script src="Index.js"></script>

@@ -28,10 +28,28 @@
 		navigate(linkEl);
 	});
 
-	function selectHandler() {
-		$('.intro1').hide();
-		$('.intro2').hide();
-		setTimeout(function() {loadAboutSection()},700);
+	function selectHandler(evt) {
+		switch(evt.hash) {
+			case '#about':
+				$('.intro1').hide();
+				$('.intro2').hide();
+				setTimeout(function() {loadAboutSection()},700);
+				break;
+			case '#skills':
+				console.log("skills");
+				break;
+			case '#workexperience':
+				console.log('workexperience');
+				break;
+			case '#portfolio':
+				console.log('portfolio');
+				break;
+			case '#contact':
+				console.log('contact');
+				break;
+			default: document.write("Unknown selection<br />")
+		}
+		
 	}
 
 	/* Home page animation ends */

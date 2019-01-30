@@ -147,6 +147,49 @@ p.intro2 {
 	opacity: 0;
 }
 
+/* Skills section CSS */
+
+#skills {
+	background-color: #45383c;
+	padding-top: 0;
+}
+
+.skillList {
+	position: relative;
+	color: #fff;
+}
+
+.skillList .lists {
+	font-family: 'Roboto Slab', serif;
+	font-size: 2em;
+}
+
+.lists span {
+	transform-origin: 0 100%;
+  	display: inline-block;
+  	line-height: 1em;
+}
+.react {
+	width: 15%;
+	height: 5%;
+	position: absolute;
+    top: 4%;
+    right: 105%;
+}
+.angular, .ember, .javascript, .html, .css, .sass, .jasmine, .jest, .git, .gulp {
+	width: 15%;
+	height: 5%;
+	position: absolute;
+	right: 105%;
+}
+#skills #moveup {
+	width: 5%;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+
 @media screen and (max-width: 50em) {
 	html,
 	body {

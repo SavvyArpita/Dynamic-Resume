@@ -36,7 +36,7 @@
 				setTimeout(function() {loadAboutSection()},700);
 				break;
 			case '#skills':
-				console.log("skills");
+				setTimeout(function() {loadSkillSection()},700);
 				break;
 			case '#workexperience':
 				console.log('workexperience');
@@ -110,5 +110,40 @@
 	}
 
 	/* About me page animation ends */
-	
+
+	/* Skills page animation starts */
+
+	function loadSkillSection() {
+		
+		const skill = document.querySelectorAll('.lists');
+		skill.forEach(ele=>{
+			charming(ele);
+		});
+		let skillletters= Array.from(document.querySelectorAll('.lists span'));
+		const logoAnimation={
+			targets: '.react, .angular, .ember, .javascript, .html, .css, .sass, .jasmine, .jest, .git, .gulp',
+			rotate: '1turn',
+			loop: true,
+		}
+		const skillAnimation={
+			targets: skillletters,
+			translateY: ["1.1em", 0],
+			translateX: ["0.55em", 0],
+			translateZ: 0,
+			rotateZ: [180, 0],
+			duration: 750,
+			easing: "easeOutExpo",
+			delay: function(el, i) {
+			return 50 * i;
+			}
+		};
+		const t1 = anime.timeline({
+			autoplay: true,
+		});
+
+		t1.add(logoAnimation)
+		  .add(skillAnimation);
+		  
+		t1.play();
+		}
 }

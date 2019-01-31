@@ -20,6 +20,16 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+#moveup {
+	display: none;
+	width: 5%;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 99;
+	cursor: pointer;
+}
+
 /* Color schemes */
 .demo-adsila {
 	--color-text: #000;
@@ -182,13 +192,28 @@ p.intro2 {
 	position: absolute;
 	right: 105%;
 }
-#skills #moveup {
-	width: 5%;
-	position: fixed;
-	bottom: 0;
-	right: 0;
+
+/* Work experience */
+#workexperience {
+	background-color:#638a50;
 }
 
+.acc, .cts {
+	border: 1px solid red;
+    border-radius: 25px;
+	padding: 10px 35px 10px 35px;
+	margin: 5px;
+	display: none;
+}
+
+.acc h1, .cts h1{
+	text-align: center;
+}
+.acc p, .cts p {
+	display: list-item;
+	color: aliceblue;
+	font-family: 'Roboto Slab', serif;
+}
 
 @media screen and (max-width: 50em) {
 	html,

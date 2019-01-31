@@ -1,4 +1,21 @@
 {
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			document.getElementById("moveup").style.display = "block";
+		} else {
+			document.getElementById("moveup").style.display = "none";
+		}
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function scrollUp() {
+		document.body.scrollTop = 0; // For Safari
+  		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	}
+
 	/* Home page animation starts */
 
 	setTimeout(() => document.body.classList.add('render'), 60);
@@ -39,7 +56,9 @@
 				setTimeout(function() {loadSkillSection()},700);
 				break;
 			case '#workexperience':
-				console.log('workexperience');
+				$('.acc').hide();
+				$('.cts').hide();
+				setTimeout(function() {loadWorkExSection()},700);
 				break;
 			case '#portfolio':
 				console.log('portfolio');
@@ -145,5 +164,48 @@
 		  .add(skillAnimation);
 		  
 		t1.play();
+	}
+
+	/* Skills page animation ends */
+
+	/* WorkEx page animation starts */
+
+	function loadWorkExSection() {
+		$('.acc').show();
+		$('.cts').show();
+		
+		const workEx1= {
+			targets: '.acc',
+			translateX: ['100%', 0],
+			easing: 'easeInOutBack',
+			duration: 950,
+			opacity: {
+				value: [0,1],
+				duration: 100
+			},
+			delay: function(el, i) {
+				return 70 * i;
+			}
 		}
+		const workEx2= {
+			targets: '.cts',
+			translateX: ['-100%',0],
+			easing: 'easeInOutBack',
+			duration: 950,
+			opacity: {
+				value: [0,1],
+				duration: 1000
+			},
+			delay: function(el, i) {
+				return 70 * i;
+			}
+		}
+		const t1 = anime.timeline({
+			autoplay: false,
+		});
+		t1.add(workEx1).add(workEx2);
+		t1.play();
+	}
+
+	/* WorkEx page animation starts */
 }

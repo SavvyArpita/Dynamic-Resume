@@ -13,8 +13,7 @@
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/anime.min.js"></script>
         <script src="js/charming.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOmj5IUQnHCwXYlkkaeEahGpqZiRWc0iw&sensor=false"></script>
     </head>
     <body class="demo-adsila">
     <main>
@@ -32,10 +31,10 @@
                     <span class="menu__item-name">Work Experience</span>
                     <span class="menu__item-label">Read about my work history</span>
                 </a>
-                <a class="menu__item" href="#portfolio" onclick="selectHandler(this)">
+                <!-- <a class="menu__item" href="#portfolio" onclick="selectHandler(this)">
                     <span class="menu__item-name">Portfolio</span>
                     <span class="menu__item-label">Explore my work</span>
-                </a>
+                </a> -->
                 <a class="menu__item" href="#contact" onclick="selectHandler(this)">
                     <span class="menu__item-name">Contact</span>
                     <span class="menu__item-label">Get in touch and find us</span>
@@ -85,6 +84,16 @@
                 <p>Collaborated with other UI developers and backend development professionals to seamlessly integrate code to create a dynamic and functional user experience.</p>
                 <p>Designed, implemented and unit tested Web Application code</p>
                 <p>Worked directly with the business analysts and REST service developers.</p>
+            </div>
+        </section>
+        <section class="content" id="contact">
+            <div id="map"></div>
+            <div class="contactDetails">
+                    <h3>Email:</h3>
+                    <span>arpitaa.90@gmail.com</span>
+                    <h3>LinkedIn</h3>
+                    <span>singh-arpita</span>
+                    <a href="https://www.linkedin.com/in/singh-arpita/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
             </div>
         </section>
         <img id="moveup" src="fonts/chevron-circle-up-solid.svg" onclick="scrollUp()"></img>

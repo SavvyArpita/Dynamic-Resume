@@ -215,6 +215,54 @@ p.intro2 {
 	font-family: 'Roboto Slab', serif;
 }
 
+#contact {
+	display: block;
+	float: left;
+	width: 100%;
+	position: relative;
+	height: 626px;
+    background-color: whitesmoke;
+}
+#map {
+	height: 100%;
+}
+.contact-content {
+	position: absolute;
+	top: 200px;
+	right: 200px;
+}
+
+.contact-address {
+	background: #337ab7;
+	padding: 20px;
+	border-radius: 10px;
+	color: #FFF;
+	font-size: 16px;
+}
+
+.contact-address ul {
+	padding: 0;
+	list-style: none;
+	margin: 0;
+}
+
+.contact-address ul li {
+	margin-bottom: 10px;	
+}
+
+.contact-address .fab {
+	font-size: 30px;
+	margin-right: 5px;
+}
+.contact-address ul a {
+	color: #fff;
+}
+
+.social-icons {
+	margin-top: 20px;
+	text-align: center;
+}
+
 @media screen and (max-width: 50em) {
 	html,
 	body {

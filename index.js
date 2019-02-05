@@ -210,7 +210,9 @@
 		t1.play();
 	}
 
-	/* WorkEx page animation starts */
+	/* WorkEx page animation ends */
+
+	/* Adding google map */
 
 	google.maps.event.addDomListener(window, 'load', init);
         

@@ -3,16 +3,24 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Portfolio</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Portfolio- Arpita Singh</title>
+        <!-- <meta name="keywords" content="UI and UX Developer, Front end Developer, Web Developer, Arpita resume, arpita singh resume, portfolio, React, Javascript">
+    <meta name="description" content="I am Arpita and I am a Front-end Developer based in Pune - India, I have specialized in JavaScript, React, EmberJs, AngularJs, HTML5, CSS3, jQuery and other tools"> -->
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Nunito:400,700" rel="stylesheet">
+        <link href="css/all.min.css" rel="stylesheet"> <!--load all styles -->
+        <link href="css/fontawesome.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="css/Index.css" />
         <link rel="stylesheet" type="text/css" href="css/style-adsila.css" />
-        <link href="css/fontawesome.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Alegreya|Roboto+Slab" rel="stylesheet">
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/anime.min.js"></script>
         <script src="js/charming.min.js"></script>
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOmj5IUQnHCwXYlkkaeEahGpqZiRWc0iw&sensor=false"></script>
     </head>
     <body class="demo-adsila">
@@ -37,7 +45,7 @@
                 </a> -->
                 <a class="menu__item" href="#contact" onclick="selectHandler(this)">
                     <span class="menu__item-name">Contact</span>
-                    <span class="menu__item-label">Get in touch and find us</span>
+                    <span class="menu__item-label">Get in touch and find me</span>
                 </a>
             </nav>
         </section>
@@ -86,14 +94,22 @@
                 <p>Worked directly with the business analysts and REST service developers.</p>
             </div>
         </section>
-        <section class="content" id="contact">
+        <section class="" id="contact">
             <div id="map"></div>
-            <div class="contactDetails">
-                    <h3>Email:</h3>
-                    <span>arpitaa.90@gmail.com</span>
-                    <h3>LinkedIn</h3>
-                    <span>singh-arpita</span>
-                    <a href="https://www.linkedin.com/in/singh-arpita/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            <div class="contact-content">
+                <div class="contact-address">
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Magapatta City, Pune</li>
+                        <li><i class="fas fa-envelope"></i> arpitaa.90@gmail.com</li>
+                        <li><i class="fas fa-mobile-alt"></i> +91-9962153278</li>
+                        <li class="social-icons">
+                          <!-- <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow"></i></a> -->
+                          <a href="https://www.linkedin.com/in/singh-arpita/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://github.com/SavvyArpita" target="_blank"><i class="fab fa-github-square"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="social">     
             </div>
         </section>
         <img id="moveup" src="fonts/chevron-circle-up-solid.svg" onclick="scrollUp()"></img>

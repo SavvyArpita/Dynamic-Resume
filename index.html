@@ -25,7 +25,32 @@
     </head>
     <body class="demo-adsila">
     <main>
-        <section class="content">
+        <section class="content welcome">
+            <svg viewBox="0 0 600 300">
+
+                <!-- Symbol -->
+                <symbol id="s-text">
+                    <text text-anchor="middle"
+                        x="50%" y="50%" dy=".35em">
+                    WELCOME
+                    </text>
+                </symbol>  
+                
+                <!-- Duplicate symbols -->
+                <use xlink:href="#s-text" class="text"
+                        ></use>
+                <use xlink:href="#s-text" class="text"
+                        ></use>
+                <use xlink:href="#s-text" class="text"
+                        ></use>
+                <use xlink:href="#s-text" class="text"
+                        ></use>
+                <use xlink:href="#s-text" class="text"
+                        ></use>
+            </svg>
+            <a class="downArrow" href="#index"><i class="fas fa-angle-double-down"></i></a>
+        </section>
+        <section class="content" id="index">
             <nav class="menu menu--adsila">
                 <a class="menu__item" href="#about" onclick="selectHandler(this)">
                     <span class="menu__item-name">About</span>
